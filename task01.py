@@ -81,7 +81,7 @@ def check_password_uniqueness(bloom_filter: BloomFilter, passwords: list) -> dic
 
     return results
 
-if __name__ == "__main__":
+def main():
     # Ініціалізація фільтра Блума
     bloom = BloomFilter(size=1000, num_hashes=3)
 
@@ -109,3 +109,6 @@ if __name__ == "__main__":
     
     for password, status in results_extra.items():
         print(f"Пароль '{password}' — {status}.")
+
+if __name__ == "__main__":
+    main()
